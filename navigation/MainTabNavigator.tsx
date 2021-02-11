@@ -5,9 +5,10 @@ import * as React from "react";
 import { Fontisto } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import TabOneScreen from "../screens/TabOneScreen";
+import TabOneScreen from "../screens/ChatsScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from "../types";
+import ChatsScreen from "../screens/ChatsScreen";
 
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
 
@@ -41,7 +42,7 @@ export default function BottomTabNavigator() {
 					tabBarLabel: () => null,
 				}}
 			/>
-			<MainTab.Screen name='Chats' component={TabTwoNavigator} />
+			<MainTab.Screen name='Chats' component={ChatsScreen} />
 			<MainTab.Screen name='Status' component={TabTwoNavigator} />
 			<MainTab.Screen name='Calls' component={TabTwoNavigator} />
 		</MainTab.Navigator>
