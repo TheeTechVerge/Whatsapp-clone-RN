@@ -32,7 +32,7 @@ export type Message = {
 };
 
 export type ChatRoom = {
-	id: String;
+	id: number;
 	users: [User];
 	lastMessage: Message;
 };
